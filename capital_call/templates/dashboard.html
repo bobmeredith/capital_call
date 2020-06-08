@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load get_item %}
+{% load custom_filters %}
+
+{% block content %}
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Date</th><th>Investment</th>
+        {% for fund in funds %}
+          <th>{{fund.fund_name}}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+    {% for call in calls %}
+      <tr>
+        <td>{{call.call.date|format_date}}</td>
+        <td>{{call.call.id}}: {{call.call.investment_name}}</td>
+        {% for fund in funds %}
+          <td>{{call.funds|get_item:fund.id|default:'-'}}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

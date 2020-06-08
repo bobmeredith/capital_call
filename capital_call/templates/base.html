@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Validus - Capital call</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/styles/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="text-center header">
+  <i class="logo"></i>
+  {% if page %}
+    <span class="app-title">Captial call</span>
+    <ul class="menu">
+      <li {% if page == "dashboard" %}class="selected"{% endif %}><a href="/capital_call/dashboard/">Dashboard</a></li>
+      <li {% if page == "new_call" %}class="selected"{% endif %}><a href="/capital_call/new_call/">New call</a></li>
+    </ul>
+  {% endif %}
+</div>
+  
+<div class="container">
+  <div class="row margin-top-1"> 
+    {% block content %}
+    {% endblock %}
+  </div>
+</div>
+
+</body>
+</html>

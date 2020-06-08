@@ -1,0 +1,64 @@
+.logo {
+	position: absolute;
+	left: 25px;
+	top: 0px;
+	width: 243px;
+	height: 68px;
+	background: url('images/validus_logo.png') no-repeat;
+}
+.margin-top-1 {
+	margin-top: 1em;
+}
+.app-title {
+	font-size:20px;
+	font-weight: bold;
+	background: #deebf7;
+	padding:4px 75px;
+}
+.header {
+	padding: 20px 0 25px 0;
+	border-bottom: 1px solid #ccc;
+	height: 75px;
+}
+table thead tr th {
+	font-weight: bold;
+}
+.menu {
+	float:right;
+
+}
+.menu li {
+	list-style: none;
+	display: inline-block;
+}
+.menu li a {
+	font-size: 20px;
+	padding: 24px 26px;
+	text-decoration: none;
+	transition: background-color 0.3s;
+}
+.menu li.selected a {
+	border-bottom: 4px solid #296ca6;
+}
+.menu li:not(.selected) a:hover {
+	background-color:#deebf7
+}
+.welcome-block{
+	display: block;
+	margin: auto;
+	text-align: center;
+	padding: 70px;
+	background: #337ab7;
+	transition: background-color 0.3s;
+	color: #ffffff;
+	font-size: 24px;
+	width: 500px;
+	border-radius: 10px;
+	border: 2px solid #2d6b9f;
+	margin-top:100px;
+}
+.welcome-block:hover {
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #2d6b9f;
+}
