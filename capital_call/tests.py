@@ -14,15 +14,15 @@ class CallTestCase(TestCase):
 	
 	def setUp(self):
 		fund1 = Fund.objects.create(fund_name="Fund 1")
-    	fund2 = Fund.objects.create(fund_name="Fund 2")
-    	fund3 = Fund.objects.create(fund_name="Fund 3")
-    	fund4 = Fund.objects.create(fund_name="Fund 4")
+		fund2 = Fund.objects.create(fund_name="Fund 2")
+		fund3 = Fund.objects.create(fund_name="Fund 3")
+		fund4 = Fund.objects.create(fund_name="Fund 4")
 
-    	Commitment.objects.create(fund=fund1, date=get_date('31/12/2017'), amount=10000000)
-    	Commitment.objects.create(fund=fund2, date=get_date('31/03/2018'), amount=15000000)
-    	Commitment.objects.create(fund=fund3, date=get_date('30/06/2018'), amount=10000000)
-    	Commitment.objects.create(fund=fund4, date=get_date('30/09/2018'), amount=15000000)
-    	Commitment.objects.create(fund=fund1, date=get_date('31/12/2018'), amount=10000000)
+		Commitment.objects.create(fund=fund1, date=get_date('31/12/2017'), amount=10000000)
+		Commitment.objects.create(fund=fund2, date=get_date('31/03/2018'), amount=15000000)
+		Commitment.objects.create(fund=fund3, date=get_date('30/06/2018'), amount=10000000)
+		Commitment.objects.create(fund=fund4, date=get_date('30/09/2018'), amount=15000000)
+		Commitment.objects.create(fund=fund1, date=get_date('31/12/2018'), amount=10000000)
 
 
 	def test_first_call(self):
