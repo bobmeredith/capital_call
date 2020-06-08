@@ -46,10 +46,10 @@
               <td>{{commitment.commitment.id}}</td>
               <td>{{commitment.commitment.date|format_date}}</td>
               <td>{{commitment.commitment.fund.fund_name}}</td>
-              <td>{{commitment.commitment.amount}}</td>
-              <td>{{commitment.undrawn}}</td>
-              <td>{{commitment.drawdown}}</td>
-              <td>{{commitment.remainder}}</td>
+              <td>{{commitment.commitment.amount|floatformat:0}}</td>
+              <td>{{commitment.undrawn|floatformat:0}}</td>
+              <td>{{commitment.drawdown|floatformat:0}}</td>
+              <td>{{commitment.remainder|floatformat:0}}</td>
             </tr>
           {% endfor %}
         </tbody>

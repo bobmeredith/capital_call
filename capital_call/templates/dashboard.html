@@ -19,7 +19,7 @@
         <td>{{call.call.date|format_date}}</td>
         <td>{{call.call.id}}: {{call.call.investment_name}}</td>
         {% for fund in funds %}
-          <td>{{call.funds|get_item:fund.id|default:'-'}}</td>
+          <td>{{call.funds|get_item:fund.id|floatformat:0|default:'-'}}</td>
         {% endfor %}
       </tr>
     {% endfor %}
